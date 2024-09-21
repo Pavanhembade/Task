@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Edit Task</h2>
+<mat-dialog-content>
+  <form [formGroup]="editForm">
+    <mat-form-field>
+      <input matInput placeholder="Assigned To" formControlName="assignedTo" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Status" formControlName="status">
+        <mat-option value="Not Started">Not Started</mat-option>
+        <mat-option value="In Progress">In Progress</mat-option>
+        <mat-option value="Completed">Completed</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Due Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dueDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Priority" formControlName="priority">
+        <mat-option value="Low">Low</mat-option>
+        <mat-option value="Normal">Normal</mat-option>
+        <mat-option value="High">High</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Comments" formControlName="comments"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>
