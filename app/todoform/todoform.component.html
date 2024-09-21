@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>New Task</h2>
+<div mat-dialog-content>
+  <form [formGroup]="taskForm">
+    <mat-form-field>
+      <input matInput placeholder="Assigned To" formControlName="assignedTo" />
+      <mat-error *ngIf="taskForm.get('assignedTo')?.hasError('required')">Assigned To is required</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-select placeholder="Status" formControlName="status">
+        <mat-option value="Not Started">Not Started</mat-option>
+        <mat-option value="In Progress">In Progress</mat-option>
+        <mat-option value="Completed">Completed</mat-option>
+      </mat-select>
+      <mat-error *ngIf="taskForm.get('status')?.hasError('required')">Status is required</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Due Date</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Due Date" formControlName="dueDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="taskForm.get('dueDate')?.hasError('required')">Due Date is required</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-select placeholder="Priority" formControlName="priority">
+        <mat-option value="Low">Low</mat-option>
+        <mat-option value="Normal">Normal</mat-option>
+        <mat-option value="High">High</mat-option>
+      </mat-select>
+      <mat-error *ngIf="taskForm.get('priority')?.hasError('required')">Priority is required</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea matInput placeholder="Comments" formControlName="comments"></textarea>
+    </mat-form-field>
+  </form>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</div>

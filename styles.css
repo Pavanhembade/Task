@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+.bodyBg {
+    background: rgba(114, 13, 71, 0.2);
+    /* Old Browsers */
+    background: -moz-linear-gradient(left, rgba(114, 13, 71, 0.2) 0%, rgba(40, 0, 113, 0.2) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(114, 13, 71, 0.2)), color-stop(100%, rgba(40, 0, 113, 0.2)));
+    /* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(114, 13, 71, 0.2) 0%, rgba(40, 0, 113, 0.2) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-grasdient(left, rgba(114, 13, 71, 0.2) 0%, rgba(40, 0, 113, 0.2) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(114, 13, 71, 0.2) 0%, rgba(40, 0, 113, 0.2) 100%);
+    /* IE 10+ */
+    background: linear-gradient(to right, rgba(114, 13, 71, 0.2) 0%, rgba(40, 0, 113, 0.2) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdb3ce', endColorstr='#b3b1d4', GradientType=1);
+    overflow-x: hidden;
+
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

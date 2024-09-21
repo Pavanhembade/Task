@@ -1,0 +1,30 @@
+.container {
+    max-width: 1000px;
+  }
+  
+  .search-box {
+    max-width: 250px;
+  }
+  
+  .table {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .pagination-controls {
+    margin-top: 20px;
+  }
+  
+  .thead-light th {
+    background-color: #f8f9fa;
+  }
+  
+  .dropdown-menu {
+    min-width: 100px;
+    text-align: center;
+  }
+  
